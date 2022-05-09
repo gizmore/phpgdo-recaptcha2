@@ -4,8 +4,9 @@ namespace GDO\Captcha\Method;
 use GDO\Core\Method;
 use GDO\Net\HTTP;
 use GDO\Captcha\Module_Captcha;
-use GDO\DB\GDT_String;
+use GDO\Core\GDT_String;
 use GDO\Net\GDT_IP;
+use GDO\Core\GDT;
 
 final class Validate extends Method
 {
@@ -18,7 +19,7 @@ final class Validate extends Method
         ];
     }
     
-    public function execute()
+    public function execute() : GDT
     {
         return $this->validateRecaptcha($this->gdoParameterVar('response')) ?
         $this->message('msg_captcha_passed') :

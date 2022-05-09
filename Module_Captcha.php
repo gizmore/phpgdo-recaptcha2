@@ -4,7 +4,7 @@ namespace GDO\Captcha;
 use GDO\Core\GDO_Module;
 use GDO\Core\GDT_Secret;
 use GDO\Javascript\Javascript;
-use GDO\DB\GDT_Checkbox;
+use GDO\Core\GDT_Checkbox;
 
 /**
  * Recaptcha Captcha implementation for gdo6.
@@ -19,14 +19,14 @@ final class Module_Captcha extends GDO_Module
     ##############
     ### Module ###
     ##############
-    public function onLoadLanguage() { return $this->loadLanguage('lang/captcha'); }
-    public function getDependencies() { return ['JQuery']; }
+    public function onLoadLanguage() : void { $this->loadLanguage('lang/captcha'); }
+//     public function getDependencies() { return ['JQuery']; }
     public function href_administrate_module() { return href('Captcha', 'CaptchaTest'); }
     
     ##############
     ### Config ###
     ##############
-    public function getConfig()
+    public function getConfig() : array
     {
         return [
             GDT_Checkbox::make('google_gets_ip')->initial('0'),

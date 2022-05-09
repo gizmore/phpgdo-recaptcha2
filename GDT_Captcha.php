@@ -5,7 +5,7 @@ use GDO\Form\GDT_Form;
 use GDO\Core\Application;
 use GDO\Core\GDT_Template;
 use GDO\UI\WithIcon;
-use GDO\DB\GDT_String;
+use GDO\Core\GDT_String;
 use GDO\Captcha\Method\Validate;
 use GDO\Session\GDO_Session;
 
