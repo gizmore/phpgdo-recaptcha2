@@ -14,11 +14,11 @@ final class CaptchaTest extends MethodForm
     
     public function createForm(GDT_Form $form) : void
     {
-        $form->addFields([
+        $form->addFields(
             GDT_Title::make('title')->initial('test')->max(3),
             GDT_Captcha::make(),
             GDT_AntiCSRF::make(),
-        ]);
+        );
         $form->actions()->addField(GDT_Submit::make());
     }
     

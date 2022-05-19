@@ -43,7 +43,7 @@ class GDT_Captcha extends GDT_String
 	################
 	### Validate ###
 	################
-	public function validate($value)
+	public function validate($value) : bool
 	{
 	    # skip tests and cli
 	    $app = Application::instance();
