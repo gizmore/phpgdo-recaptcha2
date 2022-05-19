@@ -12,7 +12,7 @@ final class CaptchaTest extends MethodForm
 {
     public function showInSitemap() { return false; }
     
-    public function createForm(GDT_Form $form)
+    public function createForm(GDT_Form $form) : void
     {
         $form->addFields([
             GDT_Title::make('title')->initial('test')->max(3),

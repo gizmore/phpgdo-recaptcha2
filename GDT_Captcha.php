@@ -35,7 +35,7 @@ class GDT_Captcha extends GDT_String
 		$this->initial = GDO_Session::get('php_captcha_lock');
 	}
 	
-	public function renderForm()
+	public function renderForm() : string
 	{
 		return GDT_Template::php('Captcha', 'form/captcha.php', ['field' => $this]);
 	}

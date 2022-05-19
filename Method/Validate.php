@@ -12,7 +12,7 @@ final class Validate extends Method
 {
     public function showInSitemap() { return false; }
     
-    public function gdoParameters()
+    public function gdoParameters() : array
     {
         return [
             GDT_String::make('response'),
