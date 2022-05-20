@@ -3,7 +3,7 @@ namespace GDO\Captcha;
 
 use GDO\Core\GDO_Module;
 use GDO\Core\GDT_Secret;
-use GDO\Javascript\Javascript;
+use GDO\Core\Javascript;
 use GDO\Core\GDT_Checkbox;
 
 /**
