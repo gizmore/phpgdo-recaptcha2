@@ -8,6 +8,7 @@ use GDO\UI\WithIcon;
 use GDO\Core\GDT_String;
 use GDO\Captcha\Method\Validate;
 use GDO\Session\GDO_Session;
+use GDO\Core\GDT;
 
 /**
  * Google recaptcha implementation.
@@ -30,6 +31,7 @@ class GDT_Captcha extends GDT_String
 	
 	protected function __construct()
 	{
+		parent::__construct();
 		$this->icon('captcha');
 		$this->tooltip('tt_captcha');
 		$this->initial = GDO_Session::get('php_captcha_lock');
