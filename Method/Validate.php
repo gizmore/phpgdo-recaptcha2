@@ -19,7 +19,7 @@ final class Validate extends Method
         ];
     }
     
-    public function execute() : GDT
+    public function execute()
     {
         return $this->validateRecaptcha($this->gdoParameterVar('response')) ?
         $this->message('msg_captcha_passed') :
