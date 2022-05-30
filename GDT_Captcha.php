@@ -25,7 +25,7 @@ class GDT_Captcha extends GDT_String
 	
 	public $cli = false;
 	
-	public function defaultName() { return 'captcha'; }
+	public function getDefaultName() : string { return 'captcha'; }
 	
 	public function addFormValue(GDT_Form $form, $value) {}
 	
