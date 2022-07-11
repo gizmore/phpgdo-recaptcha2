@@ -20,7 +20,7 @@ final class Module_Captcha extends GDO_Module
     ### Module ###
     ##############
     public function onLoadLanguage() : void { $this->loadLanguage('lang/captcha'); }
-//     public function getDependencies() { return ['JQuery']; }
+//     public function getDependencies() : array { return ['JQuery']; }
     public function href_administrate_module() { return href('Captcha', 'CaptchaTest'); }
     
     ##############
@@ -43,7 +43,7 @@ final class Module_Captcha extends GDO_Module
     #############
     ### Hooks ###
     #############
-    public function onIncludeScripts()
+    public function onIncludeScripts() : void
     {
         $this->addInlineKey();
         $this->addJS('js/gdo6-recaptcha2.js');
