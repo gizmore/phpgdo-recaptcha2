@@ -10,7 +10,7 @@ use GDO\Captcha\GDT_Captcha;
 
 final class CaptchaTest extends MethodForm
 {
-    public function showInSitemap() { return false; }
+    public function showInSitemap() : bool { return false; }
     
     public function createForm(GDT_Form $form) : void
     {
