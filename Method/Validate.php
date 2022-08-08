@@ -10,7 +10,7 @@ use GDO\Core\GDT;
 
 final class Validate extends Method
 {
-    public function showInSitemap() : bool { return false; }
+    public function isShownInSitemap() : bool { return false; }
     
     public function gdoParameters() : array
     {
