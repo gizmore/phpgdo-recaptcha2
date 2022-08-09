@@ -8,22 +8,17 @@ use GDO\UI\WithIcon;
 use GDO\Core\GDT_String;
 use GDO\Captcha\Method\Validate;
 use GDO\Session\GDO_Session;
-use GDO\Core\GDT;
 
 /**
  * Google recaptcha implementation.
  * 
  * @author gizmore
- * @version 6.10.4
- * @since 3.4.0
+ * @version 7.0.1
+ * @since 6.4.0
  */
 class GDT_Captcha extends GDT_String
 {
 	use WithIcon;
-	
-	public $notNull = true;
-	
-	public $cli = false;
 	
 	public function getDefaultName() : string { return 'captcha'; }
 	
@@ -32,6 +27,7 @@ class GDT_Captcha extends GDT_String
 	protected function __construct()
 	{
 		parent::__construct();
+		$this->notNull();
 		$this->icon('captcha');
 		$this->tooltip('tt_captcha');
 		$this->initial = GDO_Session::get('php_captcha_lock');
@@ -71,7 +67,7 @@ class GDT_Captcha extends GDT_String
 	    return true;
 	}
 
-	public function onValidated()
+	public function onValidated() : void
 	{
 	    GDO_Session::remove('php_captcha_lock');
 	    $this->unsetRequest();
