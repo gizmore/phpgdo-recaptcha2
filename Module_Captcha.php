@@ -21,7 +21,7 @@ final class Module_Captcha extends GDO_Module
     ##############
     public function onLoadLanguage() : void { $this->loadLanguage('lang/captcha'); }
 //     public function getDependencies() : array { return ['JQuery']; }
-    public function href_administrate_module() : ?string { return href('Captcha', 'CaptchaTest'); }
+    public function hrefAdministration() : ?string { return href('Captcha', 'CaptchaTest'); }
     
     ##############
     ### Config ###
